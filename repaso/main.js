@@ -54,16 +54,28 @@ const numero = 10 //number
 //     }
 // }
 
-const lista = []
-let lista2 = [1,3,"asd","kj","kpr",false,true]
-console.log(lista);
-//console.log(lista2);
-lista.push('hola');
-lista.push('que onda');
-lista.push('holi');
-lista.push('saludos');
-console.log(lista);
+// const lista = []
+// let lista2 = [1,3,"asd","kj","kpr",false,true]
+// console.log(lista);
+// //console.log(lista2);
+// lista.push('hola');
+// lista.push('que onda');
+// lista.push('holi');
+// lista.push('saludos');
+// console.log(lista);
 
-for(let i = 0; i<lista.length; i++){
-    console.log(lista[i])
+// for(let i = 0; i<lista.length; i++){
+//     console.log(lista[i])
+// }
+
+//Funciones
+function printName(name){
+    console.log(`El nombre que me pasaron es: ${name}`);
 }
+
+var myFunction = function (){
+    return 'Funcion anonima'
+}
+
+let retorno = printName('Juanito');
+console.log(retorno)
