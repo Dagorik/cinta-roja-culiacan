@@ -14,6 +14,6 @@
 console.log(1);
 setTimeout(()=>{
     console.log(2);
-},3000)
+},3000);
 for(let i = 0; i<=9999999999;i++);
 console.log(4);
