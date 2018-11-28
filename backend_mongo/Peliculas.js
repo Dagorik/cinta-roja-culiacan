@@ -22,7 +22,21 @@ const peliSchema = new Schema({
         enum:['CO','DA','TE'],
         required: true
     },
-    portadas_url:[String]
+    portadas_url:[String],
+    directores:{
+        type:[{
+            name:String,
+            edad:{
+                type: Number,
+                default: 18
+            },
+            nacionalidad:{
+                type: String,
+                enum:['MX','US'],
+                require:true
+            }
+        }]
+    }
 },{timestamps:true});
 
 const Pelicula = mongoose.model('Pelicula',peliSchema);

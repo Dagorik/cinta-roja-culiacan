@@ -50,6 +50,14 @@ app.put('/pelicula/:id',(req,res) => {
 });
 
 
+app.post('/add/director/:idPelicula',(req,res) => {
+    const {idPelicula} = req.params;
+    Pelicula.findByIdAndUpdate(idPelicula,{$push: {directores:[req.body]}},{new:true}).exec()
+        .then(pelicula => res.status(201).send(pelicula))
+        .catch(err => res.status(409).send(err))
+});
+
+
 app.listen(PORT,() => {
     console.log(`Server on port ${PORT}`);
 });
