@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './components/Card';
 import Navbar from './components/Navbar';
+import Form from './components/Form'
 import axios from 'axios';
 
 class App extends Component {
@@ -43,6 +44,7 @@ class App extends Component {
     return (
       <div>
         <Navbar/>
+        <Form/>
         <div className="App row ml-5">
           {/* {this.state.listCards} */}
           {this.renderCards()}
